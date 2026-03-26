@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#5d4201",
+              "primary-fixed-dim": "#b4c9da",
+              "on-surface": "#081e2a",
+              "background": "#f6faff",
+              "surface-container-highest": "#d0e5f7",
+              "inverse-surface": "#1f3340",
+              "secondary": "#376571",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#d6ebfc",
+              "on-primary-container": "#8196a6",
+              "on-tertiary-container": "#b18e49",
+              "on-primary-fixed": "#081e2a",
+              "on-secondary-fixed": "#001f26",
+              "tertiary-fixed-dim": "#e9c176",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#9fcedc",
+              "secondary-container": "#b8e7f5",
+              "on-secondary-container": "#3b6975",
+              "on-tertiary-fixed": "#261900",
+              "surface-container": "#dff0ff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#1c4d58",
+              "on-error-container": "#93000a",
+              "surface": "#f6faff",
+              "on-error": "#ffffff",
+              "on-background": "#081e2a",
+              "outline-variant": "#c3c7cc",
+              "primary-container": "#1a2e3b",
+              "inverse-primary": "#b4c9da",
+              "tertiary-container": "#3b2900",
+              "on-surface-variant": "#43474b",
+              "surface-variant": "#d0e5f7",
+              "surface-tint": "#4d616f",
+              "primary-fixed": "#d0e5f7",
+              "inverse-on-surface": "#e5f3ff",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "outline": "#73777c",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#eaf5ff",
+              "surface-bright": "#f6faff",
+              "secondary-fixed": "#bbeaf8",
+              "tertiary-fixed": "#ffdea5",
+              "primary": "#041926",
+              "surface-dim": "#c8ddee",
+              "on-primary-fixed-variant": "#354957",
+              "tertiary": "#211500"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f6faff; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-tertiary-fixed selection:text-tertiary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/20 dark:border-slate-800/20 shadow-sm shadow-cyan-900/5">
+<div class="flex justify-between items-center px-12 py-4 max-w-full mx-auto">
+<div class="flex items-center">
+<img alt="Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+</div>
+<div class="hidden lg:flex items-center space-x-8 font-serif tracking-wide text-lg">
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors" href="#">Services</a>
+<a class="text-cyan-900 dark:text-cyan-100 font-semibold border-b-2 border-amber-300 dark:border-amber-400 pb-1" href="#">Expertise</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors" href="#">Testimonials</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-white px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:opacity-80 active:scale-95 duration-200 transition-all">
+                    Consultation
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24 sm:pt-28 pb-12">
+<!-- Condensed Header -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-l-4 border-secondary pl-6 py-2">
+<div>
+<h1 class="text-3xl sm:text-4xl font-serif font-bold text-primary tracking-tight leading-none mb-1">
+                        Domain <span class="text-secondary italic">Specializations.</span>
+</h1>
+<p class="text-base text-on-surface-variant font-light">Precision support across ten specialized legal practice areas.</p>
+</div>
+</div>
+</section>
+<!-- Expertise Grid -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-1.5">
+<!-- 1. Immigration -->
+<div class="bg-surface-container-low p-6 sm:p-8 flex flex-col group hover:bg-surface-container transition-all cursor-default lg:col-span-2">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">public</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Immigration</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Strategic support for visa petitions, compliance audits, and complex global mobility cases with absolute rigor.</p>
+<div class="flex flex-wrap gap-2 mt-auto">
+<span class="text-[10px] font-label uppercase tracking-widest text-secondary bg-white/50 px-2 py-0.5">Visa Petitions</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-secondary bg-white/50 px-2 py-0.5">Compliance</span>
+</div>
+</div>
+<!-- 2. Family Law -->
+<div class="bg-primary text-white p-6 sm:p-8 flex flex-col group hover:bg-primary-container transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">family_restroom</span>
+<h3 class="text-lg font-serif font-bold uppercase tracking-wide">Family Law</h3>
+</div>
+<p class="text-primary-fixed-dim text-sm leading-relaxed">Sensitive documentation for matrimonial and custodial proceedings with empathetic precision.</p>
+</div>
+<!-- 3. Contract Law -->
+<div class="relative bg-slate-900 p-6 sm:p-8 flex flex-col group overflow-hidden cursor-default">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhg87kTfIrsprGQJcZGrwP_bvDAj2YLFppnQz-fujdmJarvMt7KnFc8RUJZwPF202sEiSZjpNffML3_0IBnRFZSXSe4Yg1DKzT_eS5E__IJEf0R9pLoxW98EUE1dkS3WEWx9p1v3QAEtKKkYTOoA0uurMH0GZeNthDzdpVdhRjY0MRyCbmGxnXXUnRGc_FNyj1SUOjb9JL4a7zxJ4EMReFpLNCWjRYBRxplvPxfXbxxutumi01oAF9LSvVKwKpetxrX-hmfrSZCWH0"/>
+<div class="relative z-10 flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-white text-2xl">edit_document</span>
+<h3 class="text-lg font-serif font-bold text-white uppercase tracking-wide">Contract Law</h3>
+</div>
+<p class="relative z-10 text-primary-fixed-dim text-sm leading-relaxed">Drafting and reviewing multi-jurisdictional agreements with zero-tolerance for ambiguity.</p>
+</div>
+<!-- 4. Property Law -->
+<div class="bg-white p-6 sm:p-8 flex flex-col border border-slate-100 group hover:shadow-md transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">apartment</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Property Law</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Conveyancing, title exams, and lease analysis for high-value portfolios.</p>
+</div>
+<!-- 5. Probate -->
+<div class="bg-surface-container-highest p-6 sm:p-8 flex flex-col border-b-2 border-amber-200 group hover:bg-surface-container-high transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">description</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Probate</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Estate administration and trust accounting handled with institutional decorum.</p>
+</div>
+<!-- 6. Personal Injury -->
+<div class="bg-white p-6 sm:p-8 flex flex-col border border-slate-100 group hover:shadow-md transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">medical_services</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Injury Law</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Medical record summarization and demand package preparation for litigation.</p>
+</div>
+<!-- 7. Corporate Law -->
+<div class="bg-surface-container-low p-6 sm:p-8 flex flex-col border-l-4 border-secondary group hover:bg-surface-container transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">business</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Corporate</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">M&amp;A due diligence and governance frameworks for evolving entities.</p>
+</div>
+<!-- 8. Civil Litigation -->
+<div class="bg-white p-6 sm:p-8 flex flex-col border border-slate-100 group hover:shadow-md transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">gavel</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Civil Lit</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Discovery management and trial preparation for complex commercial disputes.</p>
+</div>
+<!-- 9. Criminal Procedures -->
+<div class="bg-surface-container-high p-6 sm:p-8 flex flex-col group hover:bg-surface-container-highest transition-all cursor-default">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-secondary text-2xl">balance</span>
+<h3 class="text-lg font-serif font-bold text-primary uppercase tracking-wide">Criminal</h3>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Case file management and procedural compliance for defense operations.</p>
+</div>
+<!-- 10. Legal Admin -->
+<div class="bg-secondary text-white p-6 sm:p-8 flex flex-col group hover:opacity-95 transition-all cursor-default lg:col-span-2">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">receipt_long</span>
+<h3 class="text-lg font-serif font-bold uppercase tracking-wide">Legal Administration</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<p class="text-secondary-fixed text-sm leading-relaxed">E-filing, calendar management, and billing support to ensure your firm's engine runs flawlessly.</p>
+<div class="flex flex-col gap-1 text-[10px] font-label uppercase tracking-widest text-secondary-fixed opacity-80">
+<span>• E-Filing &amp; Systems</span>
+<span>• Calendar Management</span>
+<span>• Billing &amp; Invoicing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tightened CTA Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8 mt-12">
+<div class="bg-primary p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-2xl font-serif text-white mb-2 leading-tight">Ready to integrate our expertise?</h2>
+<p class="text-primary-fixed-dim text-sm">Consult with our lead practitioners today.</p>
+</div>
+<div class="relative z-10 w-full md:w-auto mt-6 md:mt-0">
+<button class="w-full md:w-auto bg-tertiary-fixed text-on-tertiary-fixed px-8 py-3 font-label font-bold tracking-widest uppercase hover:bg-white transition-colors">
+                        Schedule Call
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full gap-6 max-w-7xl mx-auto">
+<div class="flex items-center">
+<img alt="Logo" class="h-8 w-auto grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-serif text-sm tracking-tight">
+<a class="text-slate-500 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 hover:underline transition-all" href="#">Contact Us</a>
+</div>
+<div class="text-slate-500 dark:text-slate-400 font-serif text-sm tracking-tight">
+                © 2024 Legal Outsourcing. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

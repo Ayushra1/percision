@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Precision Remote Outsource Solution | Precision ROS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#c3c7cc",
+                        "surface-container-high": "#d6ebfc",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#354957",
+                        "tertiary-fixed": "#ffdea5",
+                        "secondary-fixed": "#bbeaf8",
+                        "inverse-on-surface": "#e5f3ff",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#b4c9da",
+                        "outline": "#73777c",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "on-secondary-container": "#3b6975",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1a2e3b",
+                        "on-secondary-fixed-variant": "#1c4d58",
+                        "surface-bright": "#f6faff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#c8ddee",
+                        "tertiary-container": "#3b2900",
+                        "surface": "#f6faff",
+                        "on-tertiary-container": "#b18e49",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d0e5f7",
+                        "primary": "#041926",
+                        "on-primary-fixed": "#081e2a",
+                        "secondary-container": "#b8e7f5",
+                        "on-surface": "#081e2a",
+                        "surface-tint": "#4d616f",
+                        "tertiary": "#211500",
+                        "secondary": "#376571",
+                        "inverse-surface": "#1f3340",
+                        "surface-container-highest": "#d0e5f7",
+                        "surface-container": "#dff0ff",
+                        "on-tertiary-fixed": "#261900",
+                        "on-primary-container": "#8196a6",
+                        "on-background": "#081e2a",
+                        "background": "#f6faff",
+                        "on-surface-variant": "#43474b",
+                        "secondary-fixed-dim": "#9fcedc",
+                        "surface-container-low": "#eaf5ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-variant": "#d0e5f7",
+                        "inverse-primary": "#b4c9da"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #041926 0%, #1a2e3b 100%);
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden-menu {
+            transform: translateX(100%);
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-slate-200/20 dark:border-slate-800/20 shadow-sm shadow-cyan-900/5">
+<div class="flex justify-between items-center px-4 md:px-12 py-4 max-w-full mx-auto">
+<div class="flex items-center">
+<img alt="Precision Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+</div>
+<div class="hidden md:flex items-center gap-8 font-serif tracking-wide text-lg">
+<a class="text-cyan-900 dark:text-cyan-100 font-semibold border-b-2 border-amber-300 dark:border-amber-400 pb-1" href="/">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors" href="#services">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors" href="#expertise">Expertise</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-800 dark:hover:text-cyan-200 transition-colors" href="#testimonials">Testimonials</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded shadow-sm hover:opacity-80 active:scale-95 duration-200 transition-all font-label text-xs uppercase tracking-wider font-semibold" href="#contact">
+                    Consultation
+                </a>
+<button class="md:hidden text-primary p-2" onclick="document.getElementById('mobile-menu').classList.remove('hidden-menu')">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[60] bg-surface md:hidden translate-x-full transition-transform duration-300 hidden-menu" id="mobile-menu">
+<div class="p-6 flex flex-col h-full">
+<div class="flex justify-between items-center mb-12">
+<img alt="Precision Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+<button class="text-primary p-2" onclick="document.getElementById('mobile-menu').classList.add('hidden-menu')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-8 text-2xl font-headline font-light">
+<a href="/" onclick="document.getElementById('mobile-menu').classList.add('hidden-menu')">Home</a>
+<a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden-menu')">Services</a>
+<a href="#expertise" onclick="document.getElementById('mobile-menu').classList.add('hidden-menu')">Expertise</a>
+<a href="#testimonials" onclick="document.getElementById('mobile-menu').classList.add('hidden-menu')">Testimonials</a>
+</div>
+<div class="mt-auto">
+<a class="block text-center w-full cta-gradient text-on-primary py-4 rounded font-label text-sm uppercase tracking-widest font-bold" href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden-menu')">
+                    Consultation
+                </a>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex items-center pt-24 pb-12 overflow-hidden bg-surface">
+<div class="absolute right-0 top-0 w-full lg:w-1/2 h-full bg-surface-container-low lg:-skew-x-12 lg:translate-x-1/4 z-0 opacity-50"></div>
+<div class="max-w-screen-2xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-7">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-[2px] bg-secondary"></div>
+<span class="text-secondary font-semibold tracking-[0.2em] uppercase text-[10px]">Elite Legal Operations</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary leading-[1.1] mb-6 tracking-tight"><span class="text-secondary italic">Elite Legal Operations Support</span></h1>
+<p class="text-base md:text-lg text-on-surface-variant max-w-lg mb-8 leading-relaxed font-light">
+                    Redefining the standard of legal and administrative support. We provide meticulous, expert-level remote solutions for firms that demand excellence.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<a class="w-full sm:w-auto cta-gradient text-on-primary px-8 py-3.5 rounded font-label text-xs uppercase tracking-widest font-bold shadow-xl shadow-primary/10 hover:translate-y-[-2px] transition-transform text-center" href="#contact">
+                        Schedule a Call
+                    </a>
+<div class="flex items-center gap-4 text-xs font-bold text-primary uppercase tracking-tighter">
+<span class="flex -space-x-2">
+<img alt="Professional" class="w-8 h-8 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQoIKzBZRYHthZbTGZbNukLs-yMQ0tccn0xOZG5ABgnL9L-idyGqDq2RXaxC-cqD9IfrroGJVYuGPXMRyJKF7GmD_Zm5I6oZcnS2UoJ_yx3rRxrzv2x8qhRbmrkn6R8y-apyeWlYu_0twokRiDOi8-9uTbunRbdRBvYj7E-gTPrm1jnJ7DE9bo31-L2NMcmhscRbKOKEqKg7c5-OnlQpGeEQhGk--j6NCtDAURRmaY8_4zMy6BiP5I8oLWRi5lL1ih1HlwJyi-HVWZ"/>
+<img alt="Professional" class="w-8 h-8 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBy-Mb2oWilGVNOslXKQZ1v-t4p2Vdy14wuy3g6UqMTu-vLwrW4omr7BeIaODCp72gtsNcn9-IhMBhDjaFae1F0KtVoqEniTEOiAcDvCBzZuCm45B83V23AHJLx5JlOKjXCUounl0BpwkJjtZ0Ka3Msh3WjEcsGa1k24ealbhvjZycKly0sT5hyzXk3J8okZ7BL4sVlxL72He1J3dS3_HS9dHWeDETlEsTaRx_CIs17WZQHzmzhr2jqfgU-kALVGrDlg8OAjOmIIvq"/>
+</span>
+<span>Trusted by 150+ Firms</span>
+</div>
+</div>
+<div class="mt-12 grid grid-cols-3 gap-4 max-w-sm">
+<div>
+<div class="text-xl font-headline font-bold text-primary">99.8%</div>
+<div class="text-[9px] text-on-surface-variant uppercase tracking-tighter">Accuracy</div>
+</div>
+<div>
+<div class="text-xl font-headline font-bold text-primary">60%</div>
+<div class="text-[9px] text-on-surface-variant uppercase tracking-tighter">Cost Savings</div>
+</div>
+<div>
+<div class="text-xl font-headline font-bold text-primary">24/7</div>
+<div class="text-[9px] text-on-surface-variant uppercase tracking-tighter">Support</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="aspect-[4/5] bg-surface-container-high rounded overflow-hidden relative shadow-2xl">
+<img alt="Legal Executive" class="w-full h-full object-cover grayscale mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlGOAYeX76X5Ir5PabgIx2bc3-wdWvujejdvBirwUYMUXKQGlxF9NjK3nEmc_NV7P9kExMqn--E3KT_voGBFFmhZz-xcZ0-rsD7e_2GA_Amj0RsUwjtV870A4uHn7OJXiV0iYJ7a9Lg-o6DfUh28bBD7dwUjTDQ65TbJ0D5l4PeeKFW4JpwLWIx49lNDXsWp5jSMwp8ytWR2_XrnxOwntWFL8_7gA6zrfQbe8XWh4jnbgkKL7tRV0tVC0R7Ul2Ng1XdEFxfteFVbME"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md p-4 rounded border border-white/20">
+<p class="text-white font-headline text-sm italic">"Precision is not an act, it is our foundational habit."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-16 px-6 md:px-8 bg-surface-container-low" id="services">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-12">
+<span class="text-secondary tracking-[0.3em] uppercase text-[10px] font-bold block mb-2">Service Suites</span>
+<h2 class="text-3xl font-headline font-bold text-primary">How We Empower Your Firm</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Legal Support -->
+<div class="bg-surface p-8 rounded shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-3xl text-secondary mb-6 block" data-icon="gavel">gavel</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-3">Legal Support</h3>
+<p class="text-on-surface-variant font-light text-sm mb-6 leading-relaxed">Expert paralegal support for litigation, discovery, and document drafting.</p>
+<ul class="space-y-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Case Management</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Legal Research</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Discovery Review</li>
+</ul>
+</div>
+<!-- Admin Excellence -->
+<div class="bg-primary text-on-primary p-8 rounded shadow-sm hover:shadow-md transition-all group">
+<span class="material-symbols-outlined text-3xl text-tertiary-fixed mb-6 block" data-icon="task_alt">task_alt</span>
+<h3 class="text-xl font-headline font-bold mb-3">Administrative Flow</h3>
+<p class="text-primary-fixed-dim font-light text-sm mb-6 leading-relaxed">Streamlining operations so your attorneys can focus on high-value work.</p>
+<ul class="space-y-2 text-xs text-primary-fixed-dim">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[10px]" data-icon="check">check</span> Calendar Integrity</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[10px]" data-icon="check">check</span> Client Intake</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[10px]" data-icon="check">check</span> CRM Hygiene</li>
+</ul>
+</div>
+<!-- Billing/Financial -->
+<div class="bg-surface p-8 rounded shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<span class="material-symbols-outlined text-3xl text-secondary mb-6 block" data-icon="payments">payments</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-3">Financial Integrity</h3>
+<p class="text-on-surface-variant font-light text-sm mb-6 leading-relaxed">Specialized legal billing and bookkeeping to capture every billable minute.</p>
+<ul class="space-y-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Billing Management</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Trust Accounting</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-secondary rounded-full"></span> Collections Support</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Expertise Section (Why Choose Section) -->
+<section class="py-16 px-6 md:px-8 bg-surface" id="expertise">
+<div class="max-w-screen-2xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+<div class="w-full lg:w-1/2">
+<img alt="Office Professionalism" class="w-full h-[400px] object-cover rounded shadow-lg grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiC9RypdskhYzfytZrRckcf55F8MSeBJOJrSlEOPgNoH7xDBEV-z2gYJRXmQd9cGx7QNqy48YseCNcq3_4BbkMEjcf1MGtITs1sUyxAohf1cSkhZMj6ZpckUbqD40Po88XG7DI3iAw6k0mfnjrXq2naa6-rvE8mGLutOQaj6XZcGEHlguKZyFB8bgWLYlF-BwudO8z9E_wgZD2HudXmgXuV904KiP7v4gcxF_wCp2FmbBxmC0sI6yOUZX5e7Q1EGKOriZG9Q8pVQSs"/>
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="text-3xl font-headline font-bold text-primary mb-8 leading-tight">The Precision Pillar</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="text-secondary font-headline text-2xl font-light italic">01.</div>
+<div>
+<h4 class="text-lg font-headline font-bold text-primary mb-1">Seamless Integration</h4>
+<p class="text-on-surface-variant font-light text-sm">We embed experts directly into your existing workflows and culture.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-secondary font-headline text-2xl font-light italic">02.</div>
+<div>
+<h4 class="text-lg font-headline font-bold text-primary mb-1">Institutional Security</h4>
+<p class="text-on-surface-variant font-light text-sm">Bank-grade encryption and strict confidentiality protocols for all data.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-secondary font-headline text-2xl font-light italic">03.</div>
+<div>
+<h4 class="text-lg font-headline font-bold text-primary mb-1">Scalable Solutions</h4>
+<p class="text-on-surface-variant font-light text-sm">Grow your team instantly as your caseload fluctuates.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16 px-6 md:px-8 bg-primary" id="testimonials">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-10">
+<span class="text-tertiary-fixed tracking-[0.3em] uppercase text-[10px] font-bold block mb-2">Partner Feedback</span>
+<h2 class="text-3xl font-headline font-bold text-white">Proven Results</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white/5 backdrop-blur-sm p-8 rounded border border-white/10">
+<p class="text-base text-primary-fixed font-light italic mb-6 leading-relaxed">
+                        "Precision ROS transformed our discovery process. Their attention to detail in document auditing is unlike any other service we've tried."
+                    </p>
+<div class="text-white font-headline font-bold text-sm">Jonathan Vance</div>
+<div class="text-[9px] text-primary-fixed-dim uppercase tracking-widest mt-1">Managing Partner, Vance &amp; Co</div>
+</div>
+<div class="bg-white/5 backdrop-blur-sm p-8 rounded border border-white/10">
+<p class="text-base text-primary-fixed font-light italic mb-6 leading-relaxed">
+                        "The transition was seamless. We were able to scale our administrative support across three states in under two weeks."
+                    </p>
+<div class="text-white font-headline font-bold text-sm">Elena Rodriguez</div>
+<div class="text-[9px] text-primary-fixed-dim uppercase tracking-widest mt-1">COO, Global Legal</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-16 px-6 md:px-8 bg-surface" id="contact">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-primary mb-4 leading-tight">Elevate Your Practice Today</h2>
+<p class="text-on-surface-variant text-sm font-light">
+                    Schedule a strategic consultation to optimize your firm’s infrastructure.
+                </p>
+</div>
+<div class="bg-white p-8 rounded shadow-xl border border-outline-variant/10">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="text-[9px] uppercase font-bold tracking-widest text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant/20 focus:border-secondary transition-all outline-none p-3 rounded text-sm" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[9px] uppercase font-bold tracking-widest text-on-surface-variant">Firm Email</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant/20 focus:border-secondary transition-all outline-none p-3 rounded text-sm" placeholder="john@firm.com" type="email"/>
+</div>
+<div class="md:col-span-2 space-y-1">
+<label class="text-[9px] uppercase font-bold tracking-widest text-on-surface-variant">Interested Service</label>
+<select class="w-full bg-surface-container-low border-b-2 border-outline-variant/20 focus:border-secondary transition-all outline-none p-3 rounded text-sm">
+<option>Legal Support</option>
+<option>Administrative Flow</option>
+<option>Financial Integrity</option>
+<option>Custom Solution</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-primary text-on-primary py-4 rounded font-label text-xs uppercase tracking-[0.2em] font-bold shadow-lg hover:translate-y-[-2px] transition-all">
+                            Submit Inquiry
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full gap-6 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Precision Logo" class="h-8 w-auto grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+<p class="font-serif text-sm tracking-tight text-slate-500 dark:text-slate-400">© 2024 Legal Outsourcing. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap gap-8 font-serif text-sm tracking-tight">
+<a class="text-slate-500 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 hover:underline transition-all" href="#contact">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-cyan-900 dark:text-cyan-500 text-sm cursor-pointer hover:opacity-70" data-icon="public">public</span>
+<span class="material-symbols-outlined text-cyan-900 dark:text-cyan-500 text-sm cursor-pointer hover:opacity-70" data-icon="gavel">gavel</span>
+</div>
+</div>
+</footer>
+</body></html>

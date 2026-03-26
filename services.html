@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#5d4201",
+              "primary-fixed-dim": "#b4c9da",
+              "on-surface": "#081e2a",
+              "background": "#f6faff",
+              "surface-container-highest": "#d0e5f7",
+              "inverse-surface": "#1f3340",
+              "secondary": "#376571",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#d6ebfc",
+              "on-primary-container": "#8196a6",
+              "on-tertiary-container": "#b18e49",
+              "on-primary-fixed": "#081e2a",
+              "on-secondary-fixed": "#001f26",
+              "tertiary-fixed-dim": "#e9c176",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#9fcedc",
+              "secondary-container": "#b8e7f5",
+              "on-secondary-container": "#3b6975",
+              "on-tertiary-fixed": "#261900",
+              "surface-container": "#dff0ff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#1c4d58",
+              "on-error-container": "#93000a",
+              "surface": "#f6faff",
+              "on-error": "#ffffff",
+              "on-background": "#081e2a",
+              "outline-variant": "#c3c7cc",
+              "primary-container": "#1a2e3b",
+              "inverse-primary": "#b4c9da",
+              "tertiary-container": "#3b2900",
+              "on-surface-variant": "#43474b",
+              "surface-variant": "#d0e5f7",
+              "surface-tint": "#4d616f",
+              "primary-fixed": "#d0e5f7",
+              "inverse-on-surface": "#e5f3ff",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "outline": "#73777c",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#eaf5ff",
+              "surface-bright": "#f6faff",
+              "secondary-fixed": "#bbeaf8",
+              "tertiary-fixed": "#ffdea5",
+              "primary": "#041926",
+              "surface-dim": "#c8ddee",
+              "on-primary-fixed-variant": "#354957",
+              "tertiary": "#211500"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #041926 0%, #1a2e3b 100%);
+        }
+        #mobile-menu:checked ~ div.mobile-nav {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl border-b border-slate-200/20 shadow-sm shadow-cyan-900/5">
+<div class="flex justify-between items-center px-6 sm:px-12 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-2">
+<img alt="Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+</div>
+<!-- Mobile Menu Toggle -->
+<input class="hidden" id="mobile-menu" type="checkbox"/>
+<label class="md:hidden cursor-pointer p-2 text-slate-600" for="mobile-menu">
+<span class="material-symbols-outlined">menu</span>
+</label>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-cyan-800 transition-colors font-serif tracking-wide text-lg" href="#">Home</a>
+<a class="text-teal-700 font-semibold border-b-2 border-amber-200 pb-1 font-serif tracking-wide text-lg transition-all" href="#">Services</a>
+<a class="text-slate-600 hover:text-cyan-800 transition-colors font-serif tracking-wide text-lg" href="#">Expertise</a>
+<a class="text-slate-600 hover:text-cyan-800 transition-colors font-serif tracking-wide text-lg" href="#">Testimonials</a>
+</div>
+<div class="hidden md:flex items-center">
+<button class="editorial-gradient text-white px-6 py-2.5 rounded-sm text-sm font-label uppercase tracking-widest hover:opacity-90 active:opacity-80 active:scale-95 duration-200 transition-all">Consultation</button>
+</div>
+<!-- Mobile Nav Dropdown -->
+<div class="mobile-nav hidden absolute top-full left-0 w-full bg-slate-50 border-t border-slate-100 flex-col p-6 space-y-4 md:hidden shadow-xl">
+<a class="text-slate-900 font-serif text-lg border-b border-slate-200 pb-2" href="#">Home</a>
+<a class="text-slate-900 font-serif text-lg border-b border-slate-200 pb-2" href="#">Services</a>
+<a class="text-slate-900 font-serif text-lg border-b border-slate-200 pb-2" href="#">Expertise</a>
+<a class="text-slate-900 font-serif text-lg border-b border-slate-200 pb-2" href="#">Testimonials</a>
+<div class="flex flex-col gap-3 pt-2">
+<button class="editorial-gradient text-white px-6 py-3 rounded-sm text-sm font-label uppercase tracking-widest">Consultation</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 sm:pt-32 pb-12 sm:pb-16">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-4 sm:px-8 mb-8 sm:mb-12">
+<div class="flex flex-col md:flex-row gap-4 sm:gap-8 items-start md:items-end">
+<div class="w-full md:w-2/3 border-l-4 border-secondary pl-4 sm:pl-6">
+<h1 class="font-headline text-3xl sm:text-4xl md:text-5xl text-primary leading-tight tracking-tight mb-2 sm:mb-4">
+                        Architectural Precision in <br class="hidden sm:block"/><span class="italic font-normal">Legal Outsourcing</span>
+</h1>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-xl font-light leading-relaxed">
+                        Seamlessly integrated paralegal and administrative support for the modern firm.
+                    </p>
+</div>
+<div class="w-full md:w-1/3 text-left md:text-right">
+<span class="text-[10px] sm:text-xs font-label uppercase tracking-[0.2em] sm:tracking-[0.3em] text-secondary font-bold">Comprehensive Capabilities</span>
+</div>
+</div>
+</header>
+<!-- Services Grid - Streamlined -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+<!-- Core Practice Support Group -->
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">gavel</span>
+<h2 class="font-headline text-xl sm:text-2xl text-primary">Practice Support</h2>
+</div>
+<div class="space-y-6">
+<div class="border-b border-outline-variant/20 pb-4">
+<h3 class="font-semibold text-primary mb-2">Immigration &amp; Global Mobility</h3>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Visa Apps (H-1B, L-1, O-1)</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> PERM Certification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Family-based Immigration</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Naturalization Support</li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-primary mb-2">Litigation &amp; Discovery</h3>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> E-Discovery &amp; Review</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Deposition Summaries</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Indexing &amp; Filing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Trial Preparation</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Corporate & Transactional Group -->
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">corporate_fare</span>
+<h2 class="font-headline text-xl sm:text-2xl text-primary">Corporate &amp; Transactional</h2>
+</div>
+<div class="space-y-6">
+<div class="border-b border-outline-variant/20 pb-4">
+<h3 class="font-semibold text-primary mb-2">Contract &amp; Drafting</h3>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> MSA &amp; SOW Drafting</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> NDAs &amp; Employment</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Real Estate Due Diligence</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Trademark Filings</li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold text-primary mb-2">Compliance &amp; Governance</h3>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Entity Formation</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> SEC Filings</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Board Minutes</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">circle</span> Regulatory Audits</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Width Administrative Banner -->
+<div class="mt-6 bg-primary text-white p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 rounded-sm relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline text-2xl mb-2">Virtual Legal Administration</h2>
+<p class="text-slate-300 text-sm max-w-xl">Elite precision in calendar management, billing, and docketing to keep your practice at peak efficiency.</p>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-x-8 gap-y-2 text-xs font-label uppercase tracking-widest text-secondary-fixed">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">calendar_month</span> Docket Management</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">account_balance</span> Trust Accounts</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">payments</span> Billing Systems</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">history_edu</span> Client Onboarding</div>
+</div>
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[150px]">laptop_mac</span>
+</div>
+</div>
+</section>
+<!-- CTA Section - Streamlined Contact Path -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8 mt-12 sm:mt-16">
+<div class="bg-surface-container-high border-t-4 border-secondary p-8 sm:p-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline text-2xl sm:text-3xl text-primary mb-4">Optimize Your Firm Today</h2>
+<p class="text-sm sm:text-base text-on-surface-variant mb-6">Connect with our specialists to build a tailored outsourcing solution that scales with your growth.</p>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Rapid onboarding within 48 hours</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-secondary font-medium">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Expert-level dedicated paralegal teams</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 shadow-lg rounded-sm">
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<input class="w-full border-slate-200 text-sm p-3 focus:ring-secondary focus:border-secondary" placeholder="Full Name" type="text"/>
+<input class="w-full border-slate-200 text-sm p-3 focus:ring-secondary focus:border-secondary" placeholder="Law Firm" type="text"/>
+</div>
+<input class="w-full border-slate-200 text-sm p-3 focus:ring-secondary focus:border-secondary" placeholder="Email Address" type="email"/>
+<textarea class="w-full border-slate-200 text-sm p-3 focus:ring-secondary focus:border-secondary" placeholder="How can we help?" rows="3"></textarea>
+<button class="editorial-gradient text-white w-full py-3 rounded-sm text-xs font-label uppercase tracking-widest hover:shadow-md transition-all">Request Strategy Call</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-slate-50">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 sm:px-12 py-10 w-full gap-6">
+<div class="flex items-center">
+<img alt="Logo" class="h-8 w-auto grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0ujqmyEfJEyVPNZd5hepjFYk_E1AnWQjZdDCTdCeCvBQAs_WcBmceGNemUL0bneQkVAZLemRlW7YTZ0Z-AYIU3F9xpiOrGN2-dajAg2ReAPzzsZXuYt_qTkF98XneqtRlG7lNNFpr-VKyjfOR1V045aAmabR3L7qDnk9v_cttRmhsVUk-f9eDIlfsCDcl4D26SKi1l1J77KqqB9d6i4R1ZO8j3hf4m43JFVtUee5UkjaYcaaLPmB0B2usz580s9VYLcSwPejCw-Fdg"/>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-cyan-700 transition-all font-serif text-sm tracking-tight hover:underline" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-cyan-700 transition-all font-serif text-sm tracking-tight hover:underline" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-cyan-700 transition-all font-serif text-sm tracking-tight hover:underline" href="#">Contact Us</a>
+</div>
+<p class="text-slate-500 font-serif text-sm tracking-tight">© 2024 Legal Outsourcing. All rights reserved.</p>
+</div>
+<div class="bg-slate-100/50 py-4 px-12 text-center">
+<span class="text-cyan-900/40 text-[10px] font-bold tracking-tighter italic uppercase">LEX PRECISION SYSTEM</span>
+</div>
+</footer>
+</body></html>
